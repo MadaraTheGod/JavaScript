@@ -30,9 +30,14 @@ const persona2 = {
   edad: 14,
 }
 
+const ADULT_AGE = 18
 
-function isAdult({ nombre,edad }) {
-  if (edad >= 18) {
+function isAdult(edad) {
+  return edad >= ADULT_AGE
+}
+
+function printAdult({ nombre,edad }) {
+  if (isAdult(edad)) {
     console.log(`${nombre} es mayor de edad!! :)`);
   } else {
     console.log(`${nombre} no es mayor de edad!! :(`);
